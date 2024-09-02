@@ -93,6 +93,9 @@ services:
       - /path/to/znc/config:/config
     ports:
       - 6501:6501
+      - 113:9113
+    sysctl:
+      net.ipv4.ip_unprivileged_port_start: 0
     restart: unless-stopped
 ```
 

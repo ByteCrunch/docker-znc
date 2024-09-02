@@ -67,6 +67,8 @@ RUN \
   tar xf \
     /tmp/znc-palaver.tar.gz -C \
     /tmp/znc/modules --strip-components=1 && \
+  curl -o /tmp/znc/modules/identd.cpp \
+    https://raw.githubusercontent.com/cynix/znc-identd/master/identd.cc && \
   cd /tmp/znc && \
   mkdir -p build && \
   cd build && \
