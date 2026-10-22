@@ -5,11 +5,14 @@ on:
     - cron:  '39 * * * *'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   external-trigger-scheduler:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.1
+      - uses: linuxserver/github-workflows/.github/actions/checkout@v1
         with:
           fetch-depth: '0'
 
